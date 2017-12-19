@@ -4,9 +4,9 @@ const path =  require("path");
 
 module.exports = {
  entry: {
-   main: "./js/zadanie00.jsx",
+   main: "./js/app.jsx",
  },
- devtool: 'cheap-eval-source-map',
+ devtool: 'source-map',
  output: {
    path: path.resolve(__dirname, "./dist/"),
    filename: "[name].out.js"
