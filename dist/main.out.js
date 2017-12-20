@@ -9600,9 +9600,9 @@ var _reactDom = __webpack_require__(98);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _groups = __webpack_require__(184);
+var _GroupStage = __webpack_require__(189);
 
-var _groups2 = _interopRequireDefault(_groups);
+var _GroupStage2 = _interopRequireDefault(_GroupStage);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -9612,339 +9612,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Groups = function (_React$Component) {
-  _inherits(Groups, _React$Component);
-
-  function Groups() {
-    _classCallCheck(this, Groups);
-
-    return _possibleConstructorReturn(this, (Groups.__proto__ || Object.getPrototypeOf(Groups)).apply(this, arguments));
-  }
-
-  _createClass(Groups, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(Group, { group: this.props.groups.groupA, title: 'Group A', matches: this.props.matches, points: this.props.points }),
-        _react2.default.createElement(Group, { group: this.props.groups.groupB, title: 'Group B', matches: this.props.matches, points: this.props.points }),
-        _react2.default.createElement(Group, { group: this.props.groups.groupC, title: 'Group C', matches: this.props.matches, points: this.props.points }),
-        _react2.default.createElement(Group, { group: this.props.groups.groupD, title: 'Group D', matches: this.props.matches, points: this.props.points }),
-        _react2.default.createElement(Group, { group: this.props.groups.groupE, title: 'Group E', matches: this.props.matches, points: this.props.points }),
-        _react2.default.createElement(Group, { group: this.props.groups.groupF, title: 'Group F', matches: this.props.matches, points: this.props.points }),
-        _react2.default.createElement(Group, { group: this.props.groups.groupG, title: 'Group G', matches: this.props.matches, points: this.props.points }),
-        _react2.default.createElement(Group, { group: this.props.groups.groupH, title: 'Group H', matches: this.props.matches, points: this.props.points })
-      );
-    }
-  }]);
-
-  return Groups;
-}(_react2.default.Component);
-
-var Group = function (_React$Component2) {
-  _inherits(Group, _React$Component2);
-
-  function Group() {
-    _classCallCheck(this, Group);
-
-    return _possibleConstructorReturn(this, (Group.__proto__ || Object.getPrototypeOf(Group)).apply(this, arguments));
-  }
-
-  _createClass(Group, [{
-    key: 'render',
-    value: function render() {
-      var _this3 = this;
-
-      var group = this.props.group.map(function (e, i) {
-        return _react2.default.createElement(
-          'tr',
-          { key: i },
-          _react2.default.createElement(
-            'td',
-            null,
-            e.name
-          ),
-          _react2.default.createElement(
-            'td',
-            null,
-            _this3.props.matches
-          ),
-          _react2.default.createElement(
-            'td',
-            null,
-            _this3.props.points
-          )
-        );
-      });
-      return _react2.default.createElement(
-        'table',
-        null,
-        _react2.default.createElement(
-          'thead',
-          null,
-          _react2.default.createElement(
-            'tr',
-            null,
-            _react2.default.createElement(
-              'th',
-              null,
-              this.props.title
-            )
-          ),
-          _react2.default.createElement(
-            'tr',
-            null,
-            _react2.default.createElement(
-              'th',
-              null,
-              'Team'
-            ),
-            _react2.default.createElement(
-              'th',
-              null,
-              'Matches'
-            ),
-            _react2.default.createElement(
-              'th',
-              null,
-              'Points'
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'tbody',
-          null,
-          group
-        )
-      );
-    }
-  }]);
-
-  return Group;
-}(_react2.default.Component);
-
-var GroupsMatches = function (_React$Component3) {
-  _inherits(GroupsMatches, _React$Component3);
-
-  function GroupsMatches() {
-    _classCallCheck(this, GroupsMatches);
-
-    return _possibleConstructorReturn(this, (GroupsMatches.__proto__ || Object.getPrototypeOf(GroupsMatches)).apply(this, arguments));
-  }
-
-  _createClass(GroupsMatches, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(GroupsMatch, { group: this.props.groups.groupA, firstScore: this.props.firstScore, secondScore: this.props.secondScore }),
-        _react2.default.createElement(GroupsMatch, { group: this.props.groups.groupB, firstScore: this.props.firstScore, secondScore: this.props.secondScore }),
-        _react2.default.createElement(GroupsMatch, { group: this.props.groups.groupC, firstScore: this.props.firstScore, secondScore: this.props.secondScore }),
-        _react2.default.createElement(GroupsMatch, { group: this.props.groups.groupD, firstScore: this.props.firstScore, secondScore: this.props.secondScore }),
-        _react2.default.createElement(GroupsMatch, { group: this.props.groups.groupE, firstScore: this.props.firstScore, secondScore: this.props.secondScore }),
-        _react2.default.createElement(GroupsMatch, { group: this.props.groups.groupF, firstScore: this.props.firstScore, secondScore: this.props.secondScore }),
-        _react2.default.createElement(GroupsMatch, { group: this.props.groups.groupG, firstScore: this.props.firstScore, secondScore: this.props.secondScore }),
-        _react2.default.createElement(GroupsMatch, { group: this.props.groups.groupH, firstScore: this.props.firstScore, secondScore: this.props.secondScore })
-      );
-    }
-  }]);
-
-  return GroupsMatches;
-}(_react2.default.Component);
-
-var GroupsMatch = function (_React$Component4) {
-  _inherits(GroupsMatch, _React$Component4);
-
-  function GroupsMatch() {
-    var _ref;
-
-    var _temp, _this5, _ret;
-
-    _classCallCheck(this, GroupsMatch);
-
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    return _ret = (_temp = (_this5 = _possibleConstructorReturn(this, (_ref = GroupsMatch.__proto__ || Object.getPrototypeOf(GroupsMatch)).call.apply(_ref, [this].concat(args))), _this5), _this5.changeFirstScore = function (e) {
-      _this5.props.firstScore(e.currentTarget.value);
-    }, _this5.changeSecondScore = function (e) {
-      _this5.props.secondScore(e.currentTarget.value);
-    }, _temp), _possibleConstructorReturn(_this5, _ret);
-  }
-
-  _createClass(GroupsMatch, [{
-    key: 'render',
-    value: function render() {
-
-      return _react2.default.createElement(
-        'form',
-        null,
-        _react2.default.createElement(
-          'label',
-          null,
-          this.props.group[0].name
-        ),
-        _react2.default.createElement('input', { onChange: this.changeFirstScore, type: 'number' }),
-        _react2.default.createElement(
-          'span',
-          null,
-          ':'
-        ),
-        _react2.default.createElement('input', { onChange: this.changeSecondScore, type: 'number' }),
-        _react2.default.createElement(
-          'label',
-          null,
-          this.props.group[1].name
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'label',
-          null,
-          this.props.group[2].name
-        ),
-        _react2.default.createElement('input', { type: 'number' }),
-        _react2.default.createElement(
-          'span',
-          null,
-          ':'
-        ),
-        _react2.default.createElement('input', { type: 'number' }),
-        _react2.default.createElement(
-          'label',
-          null,
-          this.props.group[3].name
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'label',
-          null,
-          this.props.group[0].name
-        ),
-        _react2.default.createElement('input', { type: 'number' }),
-        _react2.default.createElement(
-          'span',
-          null,
-          ':'
-        ),
-        _react2.default.createElement('input', { type: 'number' }),
-        _react2.default.createElement(
-          'label',
-          null,
-          this.props.group[2].name
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'label',
-          null,
-          this.props.group[1].name
-        ),
-        _react2.default.createElement('input', { type: 'number' }),
-        _react2.default.createElement(
-          'span',
-          null,
-          ':'
-        ),
-        _react2.default.createElement('input', { type: 'number' }),
-        _react2.default.createElement(
-          'label',
-          null,
-          this.props.group[3].name
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'label',
-          null,
-          this.props.group[0].name
-        ),
-        _react2.default.createElement('input', { type: 'number' }),
-        _react2.default.createElement(
-          'span',
-          null,
-          ':'
-        ),
-        _react2.default.createElement('input', { type: 'number' }),
-        _react2.default.createElement(
-          'label',
-          null,
-          this.props.group[3].name
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'label',
-          null,
-          this.props.group[1].name
-        ),
-        _react2.default.createElement('input', { type: 'number' }),
-        _react2.default.createElement(
-          'span',
-          null,
-          ':'
-        ),
-        _react2.default.createElement('input', { type: 'number' }),
-        _react2.default.createElement(
-          'label',
-          null,
-          this.props.group[2].name
-        ),
-        _react2.default.createElement('br', null)
-      );
-    }
-  }]);
-
-  return GroupsMatch;
-}(_react2.default.Component);
-
-var GroupStage = function (_React$Component5) {
-  _inherits(GroupStage, _React$Component5);
-
-  function GroupStage() {
-    var _ref2;
-
-    var _temp2, _this6, _ret2;
-
-    _classCallCheck(this, GroupStage);
-
-    for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-      args[_key2] = arguments[_key2];
-    }
-
-    return _ret2 = (_temp2 = (_this6 = _possibleConstructorReturn(this, (_ref2 = GroupStage.__proto__ || Object.getPrototypeOf(GroupStage)).call.apply(_ref2, [this].concat(args))), _this6), _this6.state = {
-      matches: 0,
-      points: 0,
-      firstTeamGoals: '',
-      secondTeamGoals: ''
-    }, _this6.firstScore = function (e) {
-      _this6.setState({
-        firstTeamGoals: e
-      });
-    }, _this6.secondScore = function (e) {
-      _this6.setState({
-        secondTeamGoals: e
-      });
-    }, _temp2), _possibleConstructorReturn(_this6, _ret2);
-  }
-
-  _createClass(GroupStage, [{
-    key: 'render',
-    value: function render() {
-
-      return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(Groups, { groups: _groups2.default, matches: this.state.matches, points: this.state.points }),
-        _react2.default.createElement(GroupsMatches, { groups: _groups2.default, firstScore: this.firstScore, secondScore: this.secondScore })
-      );
-    }
-  }]);
-
-  return GroupStage;
-}(_react2.default.Component);
-
-var App = function (_React$Component6) {
-  _inherits(App, _React$Component6);
+var App = function (_React$Component) {
+  _inherits(App, _React$Component);
 
   function App() {
     _classCallCheck(this, App);
@@ -9955,7 +9624,7 @@ var App = function (_React$Component6) {
   _createClass(App, [{
     key: 'render',
     value: function render() {
-      return _react2.default.createElement(GroupStage, null);
+      return _react2.default.createElement(_GroupStage2.default, null);
     }
   }]);
 
@@ -22596,6 +22265,571 @@ const groups = {
 }
 /* harmony default export */ __webpack_exports__["default"] = (groups);
 
+
+/***/ }),
+/* 185 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(82);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(98);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _Group = __webpack_require__(188);
+
+var _Group2 = _interopRequireDefault(_Group);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Groups = function (_React$Component) {
+  _inherits(Groups, _React$Component);
+
+  function Groups() {
+    _classCallCheck(this, Groups);
+
+    return _possibleConstructorReturn(this, (Groups.__proto__ || Object.getPrototypeOf(Groups)).apply(this, arguments));
+  }
+
+  _createClass(Groups, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(_Group2.default, { group: this.props.groups.groupA, title: 'Group A', matches: this.props.matches, points: this.props.points }),
+        _react2.default.createElement(_Group2.default, { group: this.props.groups.groupB, title: 'Group B', matches: this.props.matches, points: this.props.points }),
+        _react2.default.createElement(_Group2.default, { group: this.props.groups.groupC, title: 'Group C', matches: this.props.matches, points: this.props.points }),
+        _react2.default.createElement(_Group2.default, { group: this.props.groups.groupD, title: 'Group D', matches: this.props.matches, points: this.props.points }),
+        _react2.default.createElement(_Group2.default, { group: this.props.groups.groupE, title: 'Group E', matches: this.props.matches, points: this.props.points }),
+        _react2.default.createElement(_Group2.default, { group: this.props.groups.groupF, title: 'Group F', matches: this.props.matches, points: this.props.points }),
+        _react2.default.createElement(_Group2.default, { group: this.props.groups.groupG, title: 'Group G', matches: this.props.matches, points: this.props.points }),
+        _react2.default.createElement(_Group2.default, { group: this.props.groups.groupH, title: 'Group H', matches: this.props.matches, points: this.props.points })
+      );
+    }
+  }]);
+
+  return Groups;
+}(_react2.default.Component);
+
+exports.default = Groups;
+
+/***/ }),
+/* 186 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(82);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(98);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var GroupsMatch = function (_React$Component) {
+  _inherits(GroupsMatch, _React$Component);
+
+  function GroupsMatch() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, GroupsMatch);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = GroupsMatch.__proto__ || Object.getPrototypeOf(GroupsMatch)).call.apply(_ref, [this].concat(args))), _this), _this.changeFirstScore = function (e) {
+      _this.props.firstScore(e.currentTarget.value);
+    }, _this.changeSecondScore = function (e) {
+      _this.props.secondScore(e.currentTarget.value);
+    }, _this.type = function (e) {
+
+      e.preventDefault();
+
+      var inputA1 = document.querySelector('[data-id=' + _this.props.group[0].id + ']');
+      var inputA2 = document.querySelector('[data-id=' + _this.props.group[1].id + ']');
+
+      if (inputA1.value > inputA2.value) {
+        _this.props.addPoints(inputA1.dataset.id, 3);
+      } else if (inputA1.value === inputA2.value) {
+        _this.props.addPoints(inputA1.dataset.id, 1);
+        _this.props.addPoints(inputA2.dataset.id, 1);
+      } else {
+        _this.props.addPoints(inputA2.dataset.id, 3);
+      }
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(GroupsMatch, [{
+    key: 'render',
+    value: function render() {
+
+      return _react2.default.createElement(
+        'form',
+        null,
+        _react2.default.createElement(
+          'label',
+          null,
+          this.props.group[0].name
+        ),
+        _react2.default.createElement('input', { onChange: this.changeFirstScore, 'data-id': this.props.group[0].id, type: 'number' }),
+        _react2.default.createElement(
+          'span',
+          null,
+          ':'
+        ),
+        _react2.default.createElement('input', { onChange: this.changeSecondScore, 'data-id': this.props.group[1].id, type: 'number' }),
+        _react2.default.createElement(
+          'label',
+          null,
+          this.props.group[1].name
+        ),
+        _react2.default.createElement(
+          'button',
+          { onClick: this.type },
+          'Type'
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'label',
+          null,
+          this.props.group[2].name
+        ),
+        _react2.default.createElement('input', { onChange: this.changeFirstScore, 'data-id': this.props.group[2].id, type: 'number' }),
+        _react2.default.createElement(
+          'span',
+          null,
+          ':'
+        ),
+        _react2.default.createElement('input', { onChange: this.changeSecondScore, 'data-id': this.props.group[3].id, type: 'number' }),
+        _react2.default.createElement(
+          'label',
+          null,
+          this.props.group[3].name
+        ),
+        _react2.default.createElement(
+          'button',
+          { onClick: this.type },
+          'Type'
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'label',
+          null,
+          this.props.group[0].name
+        ),
+        _react2.default.createElement('input', { onChange: this.changeFirstScore, 'data-id': this.props.group[0].id, type: 'number' }),
+        _react2.default.createElement(
+          'span',
+          null,
+          ':'
+        ),
+        _react2.default.createElement('input', { onChange: this.changeSecondScore, 'data-id': this.props.group[2].id, type: 'number' }),
+        _react2.default.createElement(
+          'label',
+          null,
+          this.props.group[2].name
+        ),
+        _react2.default.createElement(
+          'button',
+          { onClick: this.type },
+          'Type'
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'label',
+          null,
+          this.props.group[1].name
+        ),
+        _react2.default.createElement('input', { onChange: this.changeFirstScore, 'data-id': this.props.group[1].id, type: 'number' }),
+        _react2.default.createElement(
+          'span',
+          null,
+          ':'
+        ),
+        _react2.default.createElement('input', { onChange: this.changeSecondScore, 'data-id': this.props.group[3].id, type: 'number' }),
+        _react2.default.createElement(
+          'label',
+          null,
+          this.props.group[3].name
+        ),
+        _react2.default.createElement(
+          'button',
+          { onClick: this.type },
+          'Type'
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'label',
+          null,
+          this.props.group[0].name
+        ),
+        _react2.default.createElement('input', { onChange: this.changeFirstScore, 'data-id': this.props.group[0].id, type: 'number' }),
+        _react2.default.createElement(
+          'span',
+          null,
+          ':'
+        ),
+        _react2.default.createElement('input', { onChange: this.changeSecondScore, 'data-id': this.props.group[3].id, type: 'number' }),
+        _react2.default.createElement(
+          'label',
+          null,
+          this.props.group[3].name
+        ),
+        _react2.default.createElement(
+          'button',
+          { onClick: this.type },
+          'Type'
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'label',
+          null,
+          this.props.group[1].name
+        ),
+        _react2.default.createElement('input', { onChange: this.changeFirstScore, 'data-id': this.props.group[1].id, type: 'number' }),
+        _react2.default.createElement(
+          'span',
+          null,
+          ':'
+        ),
+        _react2.default.createElement('input', { onChange: this.changeSecondScore, 'data-id': this.props.group[2].id, type: 'number' }),
+        _react2.default.createElement(
+          'label',
+          null,
+          this.props.group[2].name
+        ),
+        _react2.default.createElement(
+          'button',
+          { onClick: this.type },
+          'Type'
+        ),
+        _react2.default.createElement('br', null)
+      );
+    }
+  }]);
+
+  return GroupsMatch;
+}(_react2.default.Component);
+
+exports.default = GroupsMatch;
+
+/***/ }),
+/* 187 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(82);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(98);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _GroupsMatch = __webpack_require__(186);
+
+var _GroupsMatch2 = _interopRequireDefault(_GroupsMatch);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var GroupsMatches = function (_React$Component) {
+  _inherits(GroupsMatches, _React$Component);
+
+  function GroupsMatches() {
+    _classCallCheck(this, GroupsMatches);
+
+    return _possibleConstructorReturn(this, (GroupsMatches.__proto__ || Object.getPrototypeOf(GroupsMatches)).apply(this, arguments));
+  }
+
+  _createClass(GroupsMatches, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(_GroupsMatch2.default, { addPoints: this.props.addPoints, group: this.props.groups.groupA, firstScore: this.props.firstScore, secondScore: this.props.secondScore }),
+        _react2.default.createElement(_GroupsMatch2.default, { addPoints: this.props.addPoints, group: this.props.groups.groupB, firstScore: this.props.firstScore, secondScore: this.props.secondScore }),
+        _react2.default.createElement(_GroupsMatch2.default, { addPoints: this.props.addPoints, group: this.props.groups.groupC, firstScore: this.props.firstScore, secondScore: this.props.secondScore }),
+        _react2.default.createElement(_GroupsMatch2.default, { addPoints: this.props.addPoints, group: this.props.groups.groupD, firstScore: this.props.firstScore, secondScore: this.props.secondScore }),
+        _react2.default.createElement(_GroupsMatch2.default, { addPoints: this.props.addPoints, group: this.props.groups.groupE, firstScore: this.props.firstScore, secondScore: this.props.secondScore }),
+        _react2.default.createElement(_GroupsMatch2.default, { addPoints: this.props.addPoints, group: this.props.groups.groupF, firstScore: this.props.firstScore, secondScore: this.props.secondScore }),
+        _react2.default.createElement(_GroupsMatch2.default, { addPoints: this.props.addPoints, group: this.props.groups.groupG, firstScore: this.props.firstScore, secondScore: this.props.secondScore }),
+        _react2.default.createElement(_GroupsMatch2.default, { addPoints: this.props.addPoints, group: this.props.groups.groupH, firstScore: this.props.firstScore, secondScore: this.props.secondScore })
+      );
+    }
+  }]);
+
+  return GroupsMatches;
+}(_react2.default.Component);
+
+exports.default = GroupsMatches;
+
+/***/ }),
+/* 188 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(82);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(98);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Group = function (_React$Component) {
+  _inherits(Group, _React$Component);
+
+  function Group() {
+    _classCallCheck(this, Group);
+
+    return _possibleConstructorReturn(this, (Group.__proto__ || Object.getPrototypeOf(Group)).apply(this, arguments));
+  }
+
+  _createClass(Group, [{
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      var group = this.props.group.map(function (e, i) {
+        return _react2.default.createElement(
+          'tr',
+          { key: i },
+          _react2.default.createElement(
+            'td',
+            null,
+            e.name
+          ),
+          _react2.default.createElement('td', null),
+          _react2.default.createElement(
+            'td',
+            null,
+            _this2.props.points.id
+          )
+        );
+      });
+      return _react2.default.createElement(
+        'table',
+        null,
+        _react2.default.createElement(
+          'thead',
+          null,
+          _react2.default.createElement(
+            'tr',
+            null,
+            _react2.default.createElement(
+              'th',
+              null,
+              this.props.title
+            )
+          ),
+          _react2.default.createElement(
+            'tr',
+            null,
+            _react2.default.createElement(
+              'th',
+              null,
+              'Team'
+            ),
+            _react2.default.createElement(
+              'th',
+              null,
+              'Matches'
+            ),
+            _react2.default.createElement(
+              'th',
+              null,
+              'Points'
+            )
+          )
+        ),
+        _react2.default.createElement(
+          'tbody',
+          null,
+          group
+        )
+      );
+    }
+  }]);
+
+  return Group;
+}(_react2.default.Component);
+
+exports.default = Group;
+
+/***/ }),
+/* 189 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(82);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(98);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _groups = __webpack_require__(184);
+
+var _groups2 = _interopRequireDefault(_groups);
+
+var _Groups = __webpack_require__(185);
+
+var _Groups2 = _interopRequireDefault(_Groups);
+
+var _GroupsMatches = __webpack_require__(187);
+
+var _GroupsMatches2 = _interopRequireDefault(_GroupsMatches);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var GroupStage = function (_React$Component) {
+  _inherits(GroupStage, _React$Component);
+
+  function GroupStage() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, GroupStage);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = GroupStage.__proto__ || Object.getPrototypeOf(GroupStage)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+      matches: {},
+      points: {},
+      firstTeamGoals: '',
+      secondTeamGoals: ''
+    }, _this.firstScore = function (e) {
+      _this.setState({
+        firstTeamGoals: e
+      });
+    }, _this.secondScore = function (e) {
+      _this.setState({
+        secondTeamGoals: e
+      });
+    }, _this.addPoints = function (id, value) {
+      var oldValue = 0;
+      if (typeof _this.state.points[id] !== 'undefined') {
+        oldValue = _this.state.points[id];
+      }
+      var newValue = oldValue + value;
+      _this.setState({
+        points: _defineProperty({}, id, newValue)
+      });
+      console.log(_this.state.points);
+    }, _this.addMatches = function (id, value) {
+
+      var newValue = oldValue + value;
+      _this.setState({
+        points: _defineProperty({}, id, newValue)
+      });
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(GroupStage, [{
+    key: 'render',
+    value: function render() {
+
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(_Groups2.default, { groups: _groups2.default, matches: this.state.matches, points: this.state.points }),
+        _react2.default.createElement(_GroupsMatches2.default, { addMatches: this.addMatches, addPoints: this.addPoints, groups: _groups2.default, firstScore: this.firstScore, secondScore: this.secondScore })
+      );
+    }
+  }]);
+
+  return GroupStage;
+}(_react2.default.Component);
+
+exports.default = GroupStage;
 
 /***/ })
 /******/ ]);
