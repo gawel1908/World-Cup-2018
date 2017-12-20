@@ -6,12 +6,21 @@ class Group extends React.Component{
 
 
   render(){
-    let group = this.props.group.map((e, i)=>{
+
+    let gr = this.props.group.slice();
+
+
+    gr.sort((a, b)=>{
+      return this.props.points[b.id] - this.props.points[a.id]
+    })
+
+
+    let group = gr.map((e, i)=>{
       return(
         <tr key={i}>
           <td>{e.name}</td>
-          <td></td>
-          <td>{this.props.points.id}</td>
+          <td>{this.props.matches[e.id]}</td>
+          <td>{this.props.points[e.id]}</td>
         </tr>
       )
     })

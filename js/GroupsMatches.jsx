@@ -8,14 +8,23 @@ class GroupsMatches extends React.Component{
   render(){
     return(
       <div>
-        <GroupsMatch addPoints={this.props.addPoints} group={this.props.groups.groupA} firstScore={this.props.firstScore} secondScore={this.props.secondScore}/>
-        <GroupsMatch addPoints={this.props.addPoints} group={this.props.groups.groupB} firstScore={this.props.firstScore} secondScore={this.props.secondScore}/>
-        <GroupsMatch addPoints={this.props.addPoints} group={this.props.groups.groupC} firstScore={this.props.firstScore} secondScore={this.props.secondScore}/>
-        <GroupsMatch addPoints={this.props.addPoints} group={this.props.groups.groupD} firstScore={this.props.firstScore} secondScore={this.props.secondScore}/>
-        <GroupsMatch addPoints={this.props.addPoints} group={this.props.groups.groupE} firstScore={this.props.firstScore} secondScore={this.props.secondScore}/>
-        <GroupsMatch addPoints={this.props.addPoints} group={this.props.groups.groupF} firstScore={this.props.firstScore} secondScore={this.props.secondScore}/>
-        <GroupsMatch addPoints={this.props.addPoints} group={this.props.groups.groupG} firstScore={this.props.firstScore} secondScore={this.props.secondScore}/>
-        <GroupsMatch addPoints={this.props.addPoints} group={this.props.groups.groupH} firstScore={this.props.firstScore} secondScore={this.props.secondScore}/>
+        <h1>Group Matches</h1>
+        <h3>Group A</h3>
+        <GroupsMatch addMatches={this.props.addMatches} addPoints={this.props.addPoints} group={this.props.groups.groupA}  points={this.props.points} matches={this.props.matches}/>
+        <h3>Group B</h3>
+        <GroupsMatch addMatches={this.props.addMatches} addPoints={this.props.addPoints} group={this.props.groups.groupB}  points={this.props.points} matches={this.props.matches}/>
+        <h3>Group C</h3>
+        <GroupsMatch addMatches={this.props.addMatches} addPoints={this.props.addPoints} group={this.props.groups.groupC}  points={this.props.points} matches={this.props.matches}/>
+        <h3>Group D</h3>
+        <GroupsMatch addMatches={this.props.addMatches} addPoints={this.props.addPoints} group={this.props.groups.groupD}  points={this.props.points} matches={this.props.matches}/>
+        <h3>Group E</h3>
+        <GroupsMatch addMatches={this.props.addMatches} addPoints={this.props.addPoints} group={this.props.groups.groupE}  points={this.props.points} matches={this.props.matches}/>
+        <h3>Group F</h3>
+        <GroupsMatch addMatches={this.props.addMatches} addPoints={this.props.addPoints} group={this.props.groups.groupF}  points={this.props.points} matches={this.props.matches}/>
+        <h3>Group G</h3>
+        <GroupsMatch addMatches={this.props.addMatches} addPoints={this.props.addPoints} group={this.props.groups.groupG}  points={this.props.points} matches={this.props.matches}/>
+        <h3>Group H</h3>
+        <GroupsMatch addMatches={this.props.addMatches} addPoints={this.props.addPoints} group={this.props.groups.groupH}  points={this.props.points} matches={this.props.matches}/>
       </div>
     )
   }

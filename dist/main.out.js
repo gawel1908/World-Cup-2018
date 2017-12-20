@@ -22374,24 +22374,24 @@ var GroupsMatch = function (_React$Component) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = GroupsMatch.__proto__ || Object.getPrototypeOf(GroupsMatch)).call.apply(_ref, [this].concat(args))), _this), _this.changeFirstScore = function (e) {
-      _this.props.firstScore(e.currentTarget.value);
-    }, _this.changeSecondScore = function (e) {
-      _this.props.secondScore(e.currentTarget.value);
-    }, _this.type = function (e) {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = GroupsMatch.__proto__ || Object.getPrototypeOf(GroupsMatch)).call.apply(_ref, [this].concat(args))), _this), _this.type = function (e) {
 
       e.preventDefault();
 
-      var inputA1 = document.querySelector('[data-id=' + _this.props.group[0].id + ']');
-      var inputA2 = document.querySelector('[data-id=' + _this.props.group[1].id + ']');
+      var input1 = e.currentTarget.parentElement.children[1];
+      var input2 = e.currentTarget.parentElement.children[3];
 
-      if (inputA1.value > inputA2.value) {
-        _this.props.addPoints(inputA1.dataset.id, 3);
-      } else if (inputA1.value === inputA2.value) {
-        _this.props.addPoints(inputA1.dataset.id, 1);
-        _this.props.addPoints(inputA2.dataset.id, 1);
+      if (input1 !== '' && input2 !== '') {
+        _this.props.addMatches(input1.dataset.id, 1, input2.dataset.id, 1);
+        e.currentTarget.disabled = true;
+      }
+
+      if (Number(input1.value) > Number(input2.value)) {
+        _this.props.addPoints(input1.dataset.id, 3, input2.dataset.id, 0);
+      } else if (input1.value === input2.value) {
+        _this.props.addPoints(input1.dataset.id, 1, input2.dataset.id, 1);
       } else {
-        _this.props.addPoints(inputA2.dataset.id, 3);
+        _this.props.addPoints(input2.dataset.id, 3, input1.dataset.id, 0);
       }
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
@@ -22404,143 +22404,167 @@ var GroupsMatch = function (_React$Component) {
         'form',
         null,
         _react2.default.createElement(
-          'label',
+          'div',
           null,
-          this.props.group[0].name
+          _react2.default.createElement(
+            'label',
+            null,
+            this.props.group[0].name
+          ),
+          _react2.default.createElement('input', { onChange: this.changeFirstScore, 'data-id': this.props.group[0].id, type: 'number' }),
+          _react2.default.createElement(
+            'span',
+            null,
+            ':'
+          ),
+          _react2.default.createElement('input', { onChange: this.changeSecondScore, 'data-id': this.props.group[1].id, type: 'number' }),
+          _react2.default.createElement(
+            'label',
+            null,
+            this.props.group[1].name
+          ),
+          _react2.default.createElement(
+            'button',
+            { disabled: false, onClick: this.type },
+            'Type'
+          ),
+          _react2.default.createElement('br', null)
         ),
-        _react2.default.createElement('input', { onChange: this.changeFirstScore, 'data-id': this.props.group[0].id, type: 'number' }),
         _react2.default.createElement(
-          'span',
+          'div',
           null,
-          ':'
+          _react2.default.createElement(
+            'label',
+            null,
+            this.props.group[2].name
+          ),
+          _react2.default.createElement('input', { onChange: this.changeFirstScore, 'data-id': this.props.group[2].id, type: 'number' }),
+          _react2.default.createElement(
+            'span',
+            null,
+            ':'
+          ),
+          _react2.default.createElement('input', { onChange: this.changeSecondScore, 'data-id': this.props.group[3].id, type: 'number' }),
+          _react2.default.createElement(
+            'label',
+            null,
+            this.props.group[3].name
+          ),
+          _react2.default.createElement(
+            'button',
+            { disabled: false, onClick: this.type },
+            'Type'
+          ),
+          _react2.default.createElement('br', null)
         ),
-        _react2.default.createElement('input', { onChange: this.changeSecondScore, 'data-id': this.props.group[1].id, type: 'number' }),
         _react2.default.createElement(
-          'label',
+          'div',
           null,
-          this.props.group[1].name
+          _react2.default.createElement(
+            'label',
+            null,
+            this.props.group[0].name
+          ),
+          _react2.default.createElement('input', { onChange: this.changeFirstScore, 'data-id': this.props.group[0].id, type: 'number' }),
+          _react2.default.createElement(
+            'span',
+            null,
+            ':'
+          ),
+          _react2.default.createElement('input', { onChange: this.changeSecondScore, 'data-id': this.props.group[2].id, type: 'number' }),
+          _react2.default.createElement(
+            'label',
+            null,
+            this.props.group[2].name
+          ),
+          _react2.default.createElement(
+            'button',
+            { disabled: false, onClick: this.type },
+            'Type'
+          ),
+          _react2.default.createElement('br', null)
         ),
         _react2.default.createElement(
-          'button',
-          { onClick: this.type },
-          'Type'
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'label',
+          'div',
           null,
-          this.props.group[2].name
+          _react2.default.createElement(
+            'label',
+            null,
+            this.props.group[1].name
+          ),
+          _react2.default.createElement('input', { onChange: this.changeFirstScore, 'data-id': this.props.group[1].id, type: 'number' }),
+          _react2.default.createElement(
+            'span',
+            null,
+            ':'
+          ),
+          _react2.default.createElement('input', { onChange: this.changeSecondScore, 'data-id': this.props.group[3].id, type: 'number' }),
+          _react2.default.createElement(
+            'label',
+            null,
+            this.props.group[3].name
+          ),
+          _react2.default.createElement(
+            'button',
+            { disabled: false, onClick: this.type },
+            'Type'
+          ),
+          _react2.default.createElement('br', null)
         ),
-        _react2.default.createElement('input', { onChange: this.changeFirstScore, 'data-id': this.props.group[2].id, type: 'number' }),
         _react2.default.createElement(
-          'span',
+          'div',
           null,
-          ':'
+          _react2.default.createElement(
+            'label',
+            null,
+            this.props.group[0].name
+          ),
+          _react2.default.createElement('input', { onChange: this.changeFirstScore, 'data-id': this.props.group[0].id, type: 'number' }),
+          _react2.default.createElement(
+            'span',
+            null,
+            ':'
+          ),
+          _react2.default.createElement('input', { onChange: this.changeSecondScore, 'data-id': this.props.group[3].id, type: 'number' }),
+          _react2.default.createElement(
+            'label',
+            null,
+            this.props.group[3].name
+          ),
+          _react2.default.createElement(
+            'button',
+            { disabled: false, onClick: this.type },
+            'Type'
+          ),
+          _react2.default.createElement('br', null)
         ),
-        _react2.default.createElement('input', { onChange: this.changeSecondScore, 'data-id': this.props.group[3].id, type: 'number' }),
         _react2.default.createElement(
-          'label',
+          'div',
           null,
-          this.props.group[3].name
-        ),
-        _react2.default.createElement(
-          'button',
-          { onClick: this.type },
-          'Type'
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'label',
-          null,
-          this.props.group[0].name
-        ),
-        _react2.default.createElement('input', { onChange: this.changeFirstScore, 'data-id': this.props.group[0].id, type: 'number' }),
-        _react2.default.createElement(
-          'span',
-          null,
-          ':'
-        ),
-        _react2.default.createElement('input', { onChange: this.changeSecondScore, 'data-id': this.props.group[2].id, type: 'number' }),
-        _react2.default.createElement(
-          'label',
-          null,
-          this.props.group[2].name
-        ),
-        _react2.default.createElement(
-          'button',
-          { onClick: this.type },
-          'Type'
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'label',
-          null,
-          this.props.group[1].name
-        ),
-        _react2.default.createElement('input', { onChange: this.changeFirstScore, 'data-id': this.props.group[1].id, type: 'number' }),
-        _react2.default.createElement(
-          'span',
-          null,
-          ':'
-        ),
-        _react2.default.createElement('input', { onChange: this.changeSecondScore, 'data-id': this.props.group[3].id, type: 'number' }),
-        _react2.default.createElement(
-          'label',
-          null,
-          this.props.group[3].name
-        ),
-        _react2.default.createElement(
-          'button',
-          { onClick: this.type },
-          'Type'
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'label',
-          null,
-          this.props.group[0].name
-        ),
-        _react2.default.createElement('input', { onChange: this.changeFirstScore, 'data-id': this.props.group[0].id, type: 'number' }),
-        _react2.default.createElement(
-          'span',
-          null,
-          ':'
-        ),
-        _react2.default.createElement('input', { onChange: this.changeSecondScore, 'data-id': this.props.group[3].id, type: 'number' }),
-        _react2.default.createElement(
-          'label',
-          null,
-          this.props.group[3].name
-        ),
-        _react2.default.createElement(
-          'button',
-          { onClick: this.type },
-          'Type'
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'label',
-          null,
-          this.props.group[1].name
-        ),
-        _react2.default.createElement('input', { onChange: this.changeFirstScore, 'data-id': this.props.group[1].id, type: 'number' }),
-        _react2.default.createElement(
-          'span',
-          null,
-          ':'
-        ),
-        _react2.default.createElement('input', { onChange: this.changeSecondScore, 'data-id': this.props.group[2].id, type: 'number' }),
-        _react2.default.createElement(
-          'label',
-          null,
-          this.props.group[2].name
-        ),
-        _react2.default.createElement(
-          'button',
-          { onClick: this.type },
-          'Type'
-        ),
-        _react2.default.createElement('br', null)
+          _react2.default.createElement(
+            'label',
+            null,
+            this.props.group[1].name
+          ),
+          _react2.default.createElement('input', { onChange: this.changeFirstScore, 'data-id': this.props.group[1].id, type: 'number' }),
+          _react2.default.createElement(
+            'span',
+            null,
+            ':'
+          ),
+          _react2.default.createElement('input', { onChange: this.changeSecondScore, 'data-id': this.props.group[2].id, type: 'number' }),
+          _react2.default.createElement(
+            'label',
+            null,
+            this.props.group[2].name
+          ),
+          _react2.default.createElement(
+            'button',
+            { disabled: false, onClick: this.type },
+            'Type'
+          ),
+          _react2.default.createElement('br', null)
+        )
       );
     }
   }]);
@@ -22598,14 +22622,59 @@ var GroupsMatches = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         null,
-        _react2.default.createElement(_GroupsMatch2.default, { addPoints: this.props.addPoints, group: this.props.groups.groupA, firstScore: this.props.firstScore, secondScore: this.props.secondScore }),
-        _react2.default.createElement(_GroupsMatch2.default, { addPoints: this.props.addPoints, group: this.props.groups.groupB, firstScore: this.props.firstScore, secondScore: this.props.secondScore }),
-        _react2.default.createElement(_GroupsMatch2.default, { addPoints: this.props.addPoints, group: this.props.groups.groupC, firstScore: this.props.firstScore, secondScore: this.props.secondScore }),
-        _react2.default.createElement(_GroupsMatch2.default, { addPoints: this.props.addPoints, group: this.props.groups.groupD, firstScore: this.props.firstScore, secondScore: this.props.secondScore }),
-        _react2.default.createElement(_GroupsMatch2.default, { addPoints: this.props.addPoints, group: this.props.groups.groupE, firstScore: this.props.firstScore, secondScore: this.props.secondScore }),
-        _react2.default.createElement(_GroupsMatch2.default, { addPoints: this.props.addPoints, group: this.props.groups.groupF, firstScore: this.props.firstScore, secondScore: this.props.secondScore }),
-        _react2.default.createElement(_GroupsMatch2.default, { addPoints: this.props.addPoints, group: this.props.groups.groupG, firstScore: this.props.firstScore, secondScore: this.props.secondScore }),
-        _react2.default.createElement(_GroupsMatch2.default, { addPoints: this.props.addPoints, group: this.props.groups.groupH, firstScore: this.props.firstScore, secondScore: this.props.secondScore })
+        _react2.default.createElement(
+          'h1',
+          null,
+          'Group Matches'
+        ),
+        _react2.default.createElement(
+          'h3',
+          null,
+          'Group A'
+        ),
+        _react2.default.createElement(_GroupsMatch2.default, { addMatches: this.props.addMatches, addPoints: this.props.addPoints, group: this.props.groups.groupA, points: this.props.points, matches: this.props.matches }),
+        _react2.default.createElement(
+          'h3',
+          null,
+          'Group B'
+        ),
+        _react2.default.createElement(_GroupsMatch2.default, { addMatches: this.props.addMatches, addPoints: this.props.addPoints, group: this.props.groups.groupB, points: this.props.points, matches: this.props.matches }),
+        _react2.default.createElement(
+          'h3',
+          null,
+          'Group C'
+        ),
+        _react2.default.createElement(_GroupsMatch2.default, { addMatches: this.props.addMatches, addPoints: this.props.addPoints, group: this.props.groups.groupC, points: this.props.points, matches: this.props.matches }),
+        _react2.default.createElement(
+          'h3',
+          null,
+          'Group D'
+        ),
+        _react2.default.createElement(_GroupsMatch2.default, { addMatches: this.props.addMatches, addPoints: this.props.addPoints, group: this.props.groups.groupD, points: this.props.points, matches: this.props.matches }),
+        _react2.default.createElement(
+          'h3',
+          null,
+          'Group E'
+        ),
+        _react2.default.createElement(_GroupsMatch2.default, { addMatches: this.props.addMatches, addPoints: this.props.addPoints, group: this.props.groups.groupE, points: this.props.points, matches: this.props.matches }),
+        _react2.default.createElement(
+          'h3',
+          null,
+          'Group F'
+        ),
+        _react2.default.createElement(_GroupsMatch2.default, { addMatches: this.props.addMatches, addPoints: this.props.addPoints, group: this.props.groups.groupF, points: this.props.points, matches: this.props.matches }),
+        _react2.default.createElement(
+          'h3',
+          null,
+          'Group G'
+        ),
+        _react2.default.createElement(_GroupsMatch2.default, { addMatches: this.props.addMatches, addPoints: this.props.addPoints, group: this.props.groups.groupG, points: this.props.points, matches: this.props.matches }),
+        _react2.default.createElement(
+          'h3',
+          null,
+          'Group H'
+        ),
+        _react2.default.createElement(_GroupsMatch2.default, { addMatches: this.props.addMatches, addPoints: this.props.addPoints, group: this.props.groups.groupH, points: this.props.points, matches: this.props.matches })
       );
     }
   }]);
@@ -22658,7 +22727,13 @@ var Group = function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
-      var group = this.props.group.map(function (e, i) {
+      var gr = this.props.group.slice();
+
+      gr.sort(function (a, b) {
+        return _this2.props.points[b.id] - _this2.props.points[a.id];
+      });
+
+      var group = gr.map(function (e, i) {
         return _react2.default.createElement(
           'tr',
           { key: i },
@@ -22667,11 +22742,15 @@ var Group = function (_React$Component) {
             null,
             e.name
           ),
-          _react2.default.createElement('td', null),
           _react2.default.createElement(
             'td',
             null,
-            _this2.props.points.id
+            _this2.props.matches[e.id]
+          ),
+          _react2.default.createElement(
+            'td',
+            null,
+            _this2.props.points[e.id]
           )
         );
       });
@@ -22735,6 +22814,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(82);
@@ -22759,8 +22840,6 @@ var _GroupsMatches2 = _interopRequireDefault(_GroupsMatches);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -22783,32 +22862,34 @@ var GroupStage = function (_React$Component) {
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = GroupStage.__proto__ || Object.getPrototypeOf(GroupStage)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
       matches: {},
-      points: {},
-      firstTeamGoals: '',
-      secondTeamGoals: ''
-    }, _this.firstScore = function (e) {
-      _this.setState({
-        firstTeamGoals: e
-      });
-    }, _this.secondScore = function (e) {
-      _this.setState({
-        secondTeamGoals: e
-      });
-    }, _this.addPoints = function (id, value) {
-      var oldValue = 0;
-      if (typeof _this.state.points[id] !== 'undefined') {
-        oldValue = _this.state.points[id];
-      }
-      var newValue = oldValue + value;
-      _this.setState({
-        points: _defineProperty({}, id, newValue)
-      });
-      console.log(_this.state.points);
-    }, _this.addMatches = function (id, value) {
+      points: {}
+    }, _this.addPoints = function (id1, value1, id2, value2) {
 
-      var newValue = oldValue + value;
+      var points = _extends({}, _this.state.points);
+
+      if (typeof points[id1] === 'undefined' && typeof points[id1] === 'undefined') {
+        points[id1] = value1;
+        points[id2] = value2;
+      } else {
+        points[id1] += value1;
+        points[id2] += value2;
+      }
+      console.log(points, 'points');
       _this.setState({
-        points: _defineProperty({}, id, newValue)
+        points: points
+      });
+    }, _this.addMatches = function (id1, value1, id2, value2) {
+
+      var matches = _extends({}, _this.state.matches);
+      if (typeof matches[id1] === 'undefined' && typeof matches[id2] === 'undefined') {
+        matches[id1] = value1;
+        matches[id2] = value2;
+      } else {
+        matches[id1] += value1;
+        matches[id2] += value2;
+      }
+      _this.setState({
+        matches: matches
       });
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
@@ -22820,6 +22901,11 @@ var GroupStage = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         null,
+        _react2.default.createElement(
+          'h1',
+          null,
+          'Group Stage'
+        ),
         _react2.default.createElement(_Groups2.default, { groups: _groups2.default, matches: this.state.matches, points: this.state.points }),
         _react2.default.createElement(_GroupsMatches2.default, { addMatches: this.addMatches, addPoints: this.addPoints, groups: _groups2.default, firstScore: this.firstScore, secondScore: this.secondScore })
       );
