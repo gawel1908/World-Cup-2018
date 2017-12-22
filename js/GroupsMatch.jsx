@@ -15,6 +15,9 @@ type = (e)=>{
 
 
 
+
+
+
     if(input1 !== '' && input2 !== ''){
       this.props.addMatches(input1.dataset.id, 1, input2.dataset.id, 1);
       e.currentTarget.disabled = true;
@@ -37,56 +40,56 @@ type = (e)=>{
       return(
         <form>
           <div>
-            <label>{this.props.group[0].name}</label>
+            <label>{this.props.group[0].name} </label>
             <input onChange={this.changeFirstScore} data-id={this.props.group[0].id} type="number"/>
             <span>:</span>
             <input onChange={this.changeSecondScore} data-id={this.props.group[1].id} type="number"/>
-            <label>{this.props.group[1].name}</label>
+            <label> {this.props.group[1].name} </label>
             <button disabled={false} onClick={this.type}>Type</button>
             <br/>
           </div>
           <div>
-            <label>{this.props.group[2].name}</label>
+            <label>{this.props.group[2].name} </label>
             <input onChange={this.changeFirstScore} data-id={this.props.group[2].id} type="number"/>
             <span>:</span>
             <input onChange={this.changeSecondScore} data-id={this.props.group[3].id} type="number"/>
-            <label>{this.props.group[3].name}</label>
+            <label> {this.props.group[3].name} </label>
             <button disabled={false} onClick={this.type}>Type</button>
             <br/>
           </div>
           <div>
-            <label>{this.props.group[0].name}</label>
+            <label>{this.props.group[0].name} </label>
             <input onChange={this.changeFirstScore} data-id={this.props.group[0].id} type="number"/>
             <span>:</span>
             <input onChange={this.changeSecondScore} data-id={this.props.group[2].id} type="number"/>
-            <label>{this.props.group[2].name}</label>
+            <label> {this.props.group[2].name} </label>
             <button disabled={false} onClick={this.type}>Type</button>
             <br/>
           </div>
           <div>
-            <label>{this.props.group[1].name}</label>
+            <label>{this.props.group[1].name} </label>
             <input onChange={this.changeFirstScore} data-id={this.props.group[1].id} type="number"/>
             <span>:</span>
             <input onChange={this.changeSecondScore} data-id={this.props.group[3].id} type="number"/>
-            <label>{this.props.group[3].name}</label>
+            <label> {this.props.group[3].name} </label>
             <button disabled={false} onClick={this.type}>Type</button>
             <br/>
           </div>
           <div>
-            <label>{this.props.group[0].name}</label>
+            <label>{this.props.group[0].name} </label>
             <input onChange={this.changeFirstScore} data-id={this.props.group[0].id} type="number"/>
             <span>:</span>
             <input onChange={this.changeSecondScore} data-id={this.props.group[3].id} type="number"/>
-            <label>{this.props.group[3].name}</label>
+            <label> {this.props.group[3].name} </label>
             <button disabled={false} onClick={this.type}>Type</button>
             <br/>
           </div>
           <div>
-            <label>{this.props.group[1].name}</label>
+            <label>{this.props.group[1].name} </label>
             <input onChange={this.changeFirstScore} data-id={this.props.group[1].id} type="number"/>
             <span>:</span>
             <input onChange={this.changeSecondScore} data-id={this.props.group[2].id} type="number"/>
-            <label>{this.props.group[2].name}</label>
+            <label> {this.props.group[2].name} </label>
             <button disabled={false} onClick={this.type}>Type</button>
             <br/>
           </div>

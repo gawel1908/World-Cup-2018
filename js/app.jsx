@@ -2,6 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import GroupStage from './GroupStage.jsx'
 
+import {Router,
+    Route,
+    Link,
+    IndexLink,
+    IndexRoute,
+    hashHistory
+} from 'react-router';
+
 
 
 

@@ -7,6 +7,8 @@ class Group extends React.Component{
 
   render(){
 
+
+
     let gr = this.props.group.slice();
 
 
@@ -28,7 +30,7 @@ class Group extends React.Component{
       <table>
         <thead>
           <tr>
-            <th>{this.props.title}</th>
+            <th colSpan='3'>{this.props.title}</th>
           </tr>
           <tr>
             <th>Team</th>

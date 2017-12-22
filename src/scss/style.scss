@@ -1,0 +1,58 @@
+$white: rgb(250, 250, 250);
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #12db00;
+  background-image: url("https://www.transparenttextures.com/patterns/football-no-lines.png");
+  height: 100vh;
+  color: $white;
+  font-family: 'Lato', sans-serif;
+}
+button{
+  border-radius: 10px;
+  outline: 0;
+}
+.group_stage{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.groups{
+  width: 1000px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.groups table{
+  width: 220px;
+  margin: 10px;
+  background: rgba(212, 212, 212, 0.2);
+  border-collapse: collapse;
+  th, td{
+    border: 1px solid $white;
+
+  }
+
+}
+.group_matches{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+form{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+input{
+  width: 40px;
+  margin: 0 10px
+}
+.final_table{
+  margin-top: 50px;
+}

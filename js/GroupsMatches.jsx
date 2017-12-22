@@ -7,7 +7,7 @@ import GroupsMatch from './GroupsMatch.jsx';
 class GroupsMatches extends React.Component{
   render(){
     return(
-      <div>
+      <div className='group_matches'>
         <h1>Group Matches</h1>
         <h3>Group A</h3>
         <GroupsMatch addMatches={this.props.addMatches} addPoints={this.props.addPoints} group={this.props.groups.groupA}  points={this.props.points} matches={this.props.matches}/>

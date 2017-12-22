@@ -8,7 +8,7 @@ class Groups extends React.Component{
 
   render(){
 return(
-  <div>
+  <div className='groups'>
     <Group group={this.props.groups.groupA} title='Group A' matches={this.props.matches} points={this.props.points}/>
     <Group group={this.props.groups.groupB} title='Group B' matches={this.props.matches} points={this.props.points}/>
     <Group group={this.props.groups.groupC} title='Group C' matches={this.props.matches} points={this.props.points}/>
